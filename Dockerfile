@@ -1,8 +1,8 @@
 FROM ubuntu
 
-RUN apt-get remove --purge libreoffice*
-RUN apt-get clean
-RUN apt-get autoremove
+RUN apt remove --purge libreoffice*
+RUN apt clean
+RUN apt autoremove
 RUN apt-get update
 RUN apt-get install -y software-properties-common
 RUN apt-get install -y openjdk-8-jdk openjdk-8-jre
@@ -12,7 +12,7 @@ RUN cd en-US/DEBS/
 RUN dpkg -i *.deb
 RUN cd desktop-integration
 RUN dpkg -i *.deb
-RUN apt-get clean
+RUN apt clean
 
 RUN ls /opt/
 
