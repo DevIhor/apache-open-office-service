@@ -1,8 +1,5 @@
 FROM ubuntu
 
-RUN apt remove --purge libreoffice*
-RUN apt clean
-RUN apt autoremove
 RUN apt-get update
 RUN apt-get install -y software-properties-common
 RUN apt-get install -y openjdk-8-jdk openjdk-8-jre
